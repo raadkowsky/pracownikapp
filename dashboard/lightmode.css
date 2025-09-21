@@ -1,0 +1,41 @@
+/** 
+Light mode : special treatment css
+Author: Łukasz Bukowiecki
+**/
+
+[data-bs-theme='light'] {
+   #mainHeader2 {
+      color: var(--bs-primary-text-emphasis);
+      background-color: #6528e0;
+   }
+
+   #mainHeader {
+      color: var(--bs-primary-text-emphasis);
+      background-color: white;
+   }
+
+   .mainlogo {
+      /* border: 1px solid red;        */
+      height: 55px;
+      width: 170px;
+      /* background-image: url("logo_eneamy_v5.png");*/
+      background: url('images/enea_logo_granat_nowe\ 2-01.svg') no-repeat center
+         center;
+      background-size: 81%;
+   }
+
+   .loginlogo {
+      /* border: 1px solid red;        */
+      /* margin-left: -20px; */
+      height: 148px;
+      width: 350px;
+      /* background-image: url("logo_eneamy_v5.png");*/
+      background: url('images/eneaLogo.svg') no-repeat;
+      background-size: 75%;
+      margin-bottom: 2rem;
+   }
+
+   .dashboard-cards {
+      justify-content: center;
+   }
+}

@@ -1,0 +1,41 @@
+/** 
+Dark mode : special treatment css
+Author: Łukasz Bukowiecki
+**/
+
+
+[data-bs-theme=dark] 
+{
+
+
+#mainHeader {
+    color: var(--bs-primary-text-emphasis);
+    background-color: #1c1c1d;
+}
+
+.mainlogo{
+    /* border: 1px solid red;        */
+    height: 55px;
+    width: 170px;
+    /* background-image: url("logo_eneamy_v5.png");*/
+    background: url("logo_eneamy_v5_white.png") no-repeat center center; 
+    background-size:81%;
+
+}
+
+
+.loginlogo{
+     /* border: 1px solid red;        */
+  height: 148px;
+        width: 400px;
+    /* background-image: url("logo_eneamy_v5.png");*/
+    background: url("logo_enei_rgb_ver3_500w.png") no-repeat;
+    background-size:75%;
+
+}
+
+
+
+
+
+}

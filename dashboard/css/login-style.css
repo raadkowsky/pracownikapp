@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Manrope', sans-serif;
+   background-color: #f9fafb;
+   color: #101828;
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 2rem;
+}
+
+.logo-wrapper {
+   margin-bottom: 3rem;
+
+   width: auto;
+}
+
+.logo-wrapper img {
+   width: 140px;
+}
+
+.login-box {
+   width: 100%;
+   max-width: 420px;
+   position: relative;
+}
+
+.back-arrow {
+   display: block;
+   margin-bottom: 1.5rem;
+}
+
+.login-box .h2 {
+   margin-bottom: 0.5rem;
+}
+
+.form-control {
+   background-color: #ffffff;
+   border: none;
+   border-radius: 8px;
+   height: 56px;
+}
+
+.form-control:focus {
+   background-color: #fff;
+   border-color: #003087;
+   box-shadow: 0 0 0 2px rgba(0, 48, 135, 0.15);
+}
+
+.form-floating > label {
+   padding: 1rem 1rem;
+   color: #667085;
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+   opacity: 1;
+   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+   color: #003087;
+   background-color: #fff;
+   padding: 0 0.25rem;
+   height: auto;
+}
+
+.btn-primary {
+   background-color: #003087;
+   border-color: #003087;
+   font-weight: 600;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   gap: 0.5rem;
+   padding: 0.75rem 1rem;
+}
+
+.btn-primary:hover {
+   background-color: #00225f;
+   border-color: #00225f;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+   body {
+      align-items: flex-start;
+      padding: 1.5rem;
+      padding-top: 4rem;
+   }
+
+   .login-box {
+      max-width: none;
+   }
+}

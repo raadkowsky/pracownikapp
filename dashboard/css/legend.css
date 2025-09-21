@@ -1,0 +1,73 @@
+/* Główny kontener legendy */
+.legenda-container {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   flex-wrap: wrap; /* Pozwala elementom zawijać się na mniejszych ekranach */
+   background-color: #ffffff;
+   padding: 1rem 1.5rem;
+   margin-bottom: 2rem;
+   border-radius: 12px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+   border-top: 3px solid #e0f0ff; /* Delikatna górna ramka jak na projekcie */
+   gap: 1.5rem; /* Odstępy między elementami */
+}
+
+/* Każdy element w legendzie (ikona + tekst) */
+.legenda-item {
+   display: flex;
+   align-items: center;
+   gap: 0.75rem; /* Odstęp między ikoną a tekstem */
+   color: #334155;
+   font-size: 0.9rem;
+}
+
+/* Tło dla głównych ikon akcji */
+.legenda-icon-bg {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 50px;
+   height: 50px;
+   background-color: #f1f5f9;
+   border-radius: 50%;
+   font-size: 1.5rem; /* Rozmiar ikony wewnątrz */
+   color: #0d6efd;
+}
+
+/* Ikony statusu (✓ i !) */
+.legenda-item .bi-check-circle-fill {
+   color: #16a34a; /* Zielony */
+   font-size: 1.25rem;
+}
+.legenda-item .bi-exclamation-circle-fill {
+   color: #dc3545; /* Czerwony */
+   font-size: 1.25rem;
+}
+
+/* Łącznik z przerywanej linii */
+.legenda-connector {
+   flex-grow: 1; /* Rozciąga się, aby wypełnić przestrzeń */
+   max-width: 150px;
+   height: 2px;
+   background-image: linear-gradient(to right, #94a3b8 50%, transparent 50%);
+   background-position: top;
+   background-size: 10px 2px;
+   background-repeat: repeat-x;
+}
+
+/* --- RESPONSYWNOŚĆ --- */
+/* Na ekranach mniejszych niż 992px */
+@media (max-width: 991.98px) {
+   .legenda-container {
+      /* Zmiana układu na pionowy */
+      flex-direction: column;
+      align-items: flex-start; /* Wyrównanie do lewej */
+      gap: 1rem;
+   }
+
+   /* Ukrywamy łącznik na widoku mobilnym, bo nie ma sensu */
+   .legenda-connector {
+      display: none;
+   }
+}

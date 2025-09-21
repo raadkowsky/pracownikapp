@@ -1,0 +1,145 @@
+:root {
+   --primary-color: #007bff;
+   --primary-light: #e6f0ff;
+   --success-color: #28a745;
+   --danger-color: #dc3545;
+   --background-color: #ffffff;
+   --body-bg-color: #f0f2f5;
+   --text-color: #212529;
+   --text-muted-color: #6c757d;
+   --border-radius-main: 12px;
+   --border-radius-small: 4px;
+   --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pasek-placowy-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   gap: 16px;
+   padding: 16px;
+   background-color: var(--background-color);
+   border-radius: var(--border-radius-main);
+   box-shadow: var(--box-shadow);
+   max-width: 500px;
+   width: 100%;
+}
+
+.pasek-content {
+   display: flex;
+   align-items: flex-start;
+   gap: 16px;
+}
+
+.ikony-statusu {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+
+.ikona {
+   position: relative;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   background-color: var(--primary-light);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 24px;
+   color: var(--primary-color);
+}
+
+.status-dot {
+   position: absolute;
+   top: -5px;
+   left: -5px;
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   border: 2px solid white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   font-size: 14px;
+   font-weight: bold;
+}
+
+.status-dot.check {
+   background-color: var(--success-color);
+}
+
+.status-dot.warning {
+   background-color: var(--danger-color);
+}
+
+.informacje-paska {
+   display: flex;
+   flex-direction: column;
+   gap: 4px;
+}
+
+.nazwa-firmy {
+   font-size: 14px;
+   color: #0056b3;
+   background-color: var(--primary-light);
+   padding: 4px 8px;
+   border-radius: var(--border-radius-small);
+   font-weight: bold;
+   align-self: flex-start;
+}
+
+.tytul {
+   font-size: 24px;
+   font-weight: bold;
+   color: var(--text-color);
+}
+
+.okres {
+   font-size: 14px;
+   color: var(--text-muted-color);
+}
+
+.pasek-actions {
+   align-self: flex-end;
+   flex-shrink: 0;
+}
+
+.bi-check-circle-fill::before,
+.bi-exclamation-circle-fill::before,
+.bi-check-lg::before,
+.bi-exclamation-lg::before {
+   vertical-align: 0.125em;
+}
+
+.nav-link.active {
+  font-weight: 800;
+}
+
+
+@media (max-width: 576px) {
+   .pasek-placowy-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+   }
+
+   .pasek-content {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .ikony-statusu {
+      flex-direction: row;
+   }
+
+   .informacje-paska {
+      align-items: center;
+   }
+
+   .pasek-actions {
+      align-self: center;
+      margin-top: 16px;
+   }
+}

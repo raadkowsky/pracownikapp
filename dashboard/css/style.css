@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Manrope', sans-serif;
+   background-color: #ffffff;
+   color: #212529;
+   min-height: 100vh;
+
+   /* Ujednolicona metoda centrowania za pomocą Flexbox */
+   display: flex;
+   align-items: center; /* Centrowanie w pionie (Y) */
+   justify-content: center; /* Centrowanie w poziomie (X) */
+   padding: 2rem;
+}
+
+/* Główny kontener, który jest pozycjonowany relatywnie dla loga */
+.content-container {
+   position: relative;
+   width: 100%;
+   max-width: 1200px;
+}
+
+/* Logo pozycjonowane absolutnie, "oderwane" od reszty */
+.logo-wrapper {
+   position: absolute;
+   top: -80px;
+   left: 0;
+   width: auto;
+}
+
+.logo-wrapper img {
+   width: 160px;
+}
+
+.content-left h1 {
+   font-weight: 800;
+}
+
+.content-left .lead {
+   color: #667085 !important;
+   font-size: 1rem;
+}
+
+/* Tło dla obrazka w lewej kolumnie */
+.image-background {
+   border-radius: 24px;
+}
+
+.qr-code {
+   border: 1px solid #dee2e6;
+   border-radius: 8px;
+}
+
+/* Stylowanie przycisków */
+.btn {
+   font-weight: 600;
+   padding: 0.75rem 1rem;
+}
+
+.btn-primary {
+   background-color: #003087;
+   border-color: #003087;
+}
+
+.btn-primary:hover {
+   background-color: #00225f;
+   border-color: #00225f;
+}
+
+.btn-outline-secondary {
+   color: #495057;
+   border-color: #ced4da;
+}
+
+.btn-outline-secondary:hover {
+   background-color: #f1f3f5;
+   border-color: #ced4da;
+   color: #212529;
+}
+
+.installer-title {
+   color: #667085;
+   font-weight: 700;
+}
+
+.btn-register {
+   border-color: #eaecf0;
+   color: #003087;
+}
+
+/* === Media Queries dla responsywności === */
+@media (max-width: 991.98px) {
+   body {
+      /* Na mobilkach wyłączamy centrowanie w pionie, treść płynie od góry */
+      align-items: flex-start;
+   }
+
+   .content-container {
+      margin-top: 6.25rem; /* 100px */
+   }
+
+   .logo-wrapper {
+      /* Zmieniamy pozycjonowanie na statyczne, by logo było w normalnym przepływie */
+      position: static;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+   }
+
+   .content-left {
+      text-align: center;
+      margin-bottom: 3rem;
+   }
+}

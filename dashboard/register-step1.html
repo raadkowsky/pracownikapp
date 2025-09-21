@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pl">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Rejestracja - Twoje dane</title>
+
+      <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+         rel="stylesheet"
+      />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap"
+         rel="stylesheet"
+      />
+
+      <link href="css/register-style.css" rel="stylesheet" />
+   </head>
+   <body>
+      <div class="form-container">
+         <div class="logo-wrapper">
+            <img src="images/eneaLogo.svg" alt="Logo Enea" />
+         </div>
+
+         <form id="registration-form">
+            <div class="form-header">
+               <a href="index.html" class="back-arrow" aria-label="Powrót">
+                  <svg
+                     width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                  >
+                     <path
+                        d="M19 12H5"
+                        stroke="#101828"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                     />
+                     <path
+                        d="M12 19L5 12L12 5"
+                        stroke="#101828"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                     />
+                  </svg>
+               </a>
+               <h1 class="h2 fw-bold">Twoje dane</h1>
+               <p class="text-muted">Wprowadź swoje dane</p>
+            </div>
+
+            <div class="row g-3">
+               <div class="col-md-6 form-floating">
+                  <input
+                     type="text"
+                     class="form-control"
+                     id="first-name"
+                     placeholder="Imię"
+                     required
+                  />
+                  <label for="first-name">Imię*</label>
+               </div>
+               <div class="col-md-6 form-floating">
+                  <input
+                     type="text"
+                     class="form-control"
+                     id="last-name"
+                     placeholder="Nazwisko"
+                     required
+                  />
+                  <label for="last-name">Nazwisko*</label>
+               </div>
+               <div class="col-md-6 form-floating">
+                  <input
+                     type="text"
+                     class="form-control"
+                     id="pesel"
+                     placeholder="Pesel"
+                     pattern="\d{11}"
+                     title="PESEL musi składać się z 11 cyfr"
+                     required
+                  />
+                  <label for="pesel">Pesel*</label>
+               </div>
+               <div class="col-md-6 form-floating">
+                  <input
+                     type="text"
+                     class="form-control"
+                     id="company"
+                     placeholder="Spółka"
+                     required
+                  />
+                  <label for="company">Spółka*</label>
+               </div>
+               <div class="col-12 form-floating">
+                  <input
+                     type="text"
+                     class="form-control"
+                     id="manager-name"
+                     placeholder="Imię i nazwisko przełożonego"
+                     required
+                  />
+                  <label for="manager-name"
+                     >Imię i nazwisko przełożonego*</label
+                  >
+               </div>
+               <div class="col-12">
+                  <div class="input-group">
+                     <span class="input-group-text">+48</span>
+                     <div class="form-floating flex-grow-1">
+                        <input
+                           type="tel"
+                           class="form-control"
+                           id="phone-number"
+                           placeholder="Numer telefonu"
+                           pattern="[0-9]{9}"
+                           title="Numer telefonu musi składać się z 9 cyfr"
+                           required
+                        />
+                        <label for="phone-number">Numer telefonu*</label>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12">
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="has-work-email-checkbox"
+                     />
+                     <label
+                        class="form-check-label"
+                        for="has-work-email-checkbox"
+                     >
+                        Posiadam służbowy adres email
+                     </label>
+                  </div>
+               </div>
+               <div class="col-12 hidden" id="work-email-wrapper">
+                  <div class="input-group">
+                     <div class="form-floating flex-grow-1">
+                        <input
+                           type="email"
+                           class="form-control"
+                           id="work-email-input"
+                           placeholder="Służbowy adres email"
+                        />
+                        <label for="work-email-input"
+                           >Służbowy adres email*</label
+                        >
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="form-footer">
+               <p class="required-note">* Pole obowiązkowe</p>
+               <a
+                  href="register-agreements.html"
+                  type="submit"
+                  class="btn btn-primary btn-lg"
+               >
+                  Przejdź dalej
+                  <svg
+                     width="20"
+                     height="20"
+                     viewBox="0 0 20 20"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                  >
+                     <path
+                        d="M4.16699 10H15.8337"
+                        stroke="white"
+                        stroke-width="1.67"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                     />
+                     <path
+                        d="M10 4.16699L15.8333 10.0003L10 15.8337"
+                        stroke="white"
+                        stroke-width="1.67"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                     />
+                  </svg>
+               </a>
+            </div>
+         </form>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="js/app.js"></script>
+   </body>
+</html>

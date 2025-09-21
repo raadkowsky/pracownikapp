@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Manrope', sans-serif;
+   background-color: #f9fafb;
+   color: #101828;
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 2rem;
+}
+
+.logo-wrapper {
+   margin-bottom: 3rem;
+}
+
+.logo-wrapper img {
+   width: 140px;
+}
+
+.login-box {
+   width: 100%;
+   max-width: 420px;
+}
+
+.back-arrow {
+   display: block;
+   margin-bottom: 1.5rem;
+}
+
+.login-box .h2 {
+   margin-bottom: 0.5rem;
+}
+
+.otp-container {
+   justify-content: space-between;
+}
+
+.otp-input {
+   width: 52px;
+   height: 60px;
+   font-size: 1.5rem;
+   font-weight: 500;
+   border-radius: 8px;
+   border: none;
+   background-color: #ffffff;
+}
+
+.otp-input:focus {
+   border-color: #003087;
+   z-index: 1;
+}
+
+.btn-primary {
+   background-color: #003087;
+   border-color: #003087;
+   font-weight: 600;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   gap: 0.5rem;
+   padding: 0.75rem 1rem;
+}
+
+.btn-primary:hover {
+   background-color: #00225f;
+   border-color: #00225f;
+}
+
+/* rwd */
+@media (max-width: 768px) {
+   body {
+      align-items: flex-start;
+      padding: 1.5rem;
+      padding-top: 4rem;
+   }
+
+   .login-box {
+      max-width: none;
+   }
+}
+
+@media (max-width: 400px) {
+   .otp-container {
+      gap: 0.5rem !important;
+   }
+   .otp-input {
+      width: 40px;
+      height: 48px;
+      font-size: 1.25rem;
+   }
+}
