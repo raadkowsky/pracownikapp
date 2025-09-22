@@ -150,3 +150,20 @@ body {
       justify-content: center;
    }
 }
+
+/* W pliku css/register-style.css */
+
+/* Styl dla pól, które przeszły walidację */
+.form-control:valid {
+   border-color: #198754; /* Zielony */
+}
+
+/* Styl dla pól, które nie przeszły walidacji, po próbie interakcji */
+.form-control:invalid:not(:placeholder-shown) {
+   border-color: #dc3545; /* Czerwony */
+}
+
+/* Ukrywa pole na email na starcie */
+.hidden {
+   display: none;
+}
