@@ -60,6 +60,11 @@ p.text-muted {
    max-width: 400px;
 }
 
+.back-btn {
+   background-color: #003087;
+   border-color: #003087;
+}
+
 /* Rrwd*/
 @media (max-width: 768px) {
    body {
