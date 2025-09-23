@@ -634,6 +634,64 @@
                      </div>
                   </div>
                   <!-- card end -->
+
+                  <!-- modal start -->
+                  <div
+                     class="modal fade"
+                     id="regulaminModal"
+                     tabindex="-1"
+                     aria-labelledby="regulaminModalLabel"
+                     aria-hidden="true"
+                  >
+                     <div class="modal-dialog">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <h1
+                                 class="modal-title fs-5"
+                                 id="regulaminModalLabel"
+                              >
+                                 Akceptacja oświadczenia
+                              </h1>
+                              <button
+                                 type="button"
+                                 class="btn-close"
+                                 data-bs-dismiss="modal"
+                                 aria-label="Close"
+                              ></button>
+                           </div>
+                           <div class="modal-body">
+                              <p>
+                                 Pobierając ten dokument, akceptujesz warunki
+                                 oświadczenia na udostępnianie dokumentu drogą
+                                 elektroniczą. Prosimy o zapoznanie się z jego
+                                 treścią.
+                              </p>
+                              <p>
+                                 <small class="text-muted"
+                                    >Treść oświadczenia</small
+                                 >
+                              </p>
+                           </div>
+                           <div class="modal-footer">
+                              <button
+                                 type="button"
+                                 class="btn btn-secondary"
+                                 data-bs-dismiss="modal"
+                              >
+                                 Anuluj
+                              </button>
+                              <button
+                                 type="button"
+                                 class="btn btn-primary card-download-btn"
+                                 id="acceptDownloadBtn"
+                              >
+                                 Akceptuję i pobieram
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- modal end -->
                   <!-- ################################## -->
 
                   <!-- ################################## -->
@@ -962,6 +1020,37 @@
             </div>
          </div>
       </div>
+      <script>
+         const regulaminModal = document.getElementById('regulaminModal');
+         const acceptDownloadBtn = document.getElementById('acceptDownloadBtn');
+
+         // Ten fragment kodu uruchamia się, gdy modal ma się zaraz pokazać
+         regulaminModal.addEventListener('show.bs.modal', (event) => {
+            // event.relatedTarget to element, który wywołał modal (nasz link "Zapisz")
+            const triggerLink = event.relatedTarget;
+
+            // Pobieramy URL do pobrania z atrybutu data-download-url
+            const downloadUrl = triggerLink.getAttribute('data-download-url');
+
+            // Zapisujemy ten URL w przycisku "Akceptuję", aby mieć do niego dostęp później
+            acceptDownloadBtn.dataset.url = downloadUrl;
+         });
+
+         // Ten fragment kodu uruchamia się po kliknięciu przycisku "Akceptuję i pobieram"
+         acceptDownloadBtn.addEventListener('click', () => {
+            // Pobieramy zapisany wcześniej URL
+            const url = acceptDownloadBtn.dataset.url;
+
+            if (url) {
+               // Przekierowujemy przeglądarkę pod ten URL, co rozpocznie pobieranie
+               window.location.href = url;
+            }
+
+            // Opcjonalnie: ukrywamy modal po kliknięciu
+            const modalInstance = bootstrap.Modal.getInstance(regulaminModal);
+            modalInstance.hide();
+         });
+      </script>
       <script src="js/app.js" defer></script>
       <script src="js/pwa-installer.js"></script>
    </body>
