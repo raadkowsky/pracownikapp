@@ -165,6 +165,15 @@ body {
    .nav-tabs {
       display: none;
    }
+
+   .legenda-icon-bg {
+      width: 25px;
+      height: 25px;
+   }
+
+   .navi-documents {
+      display: none !important;
+   }
 }
 
 @media (min-width: 768px) {
@@ -192,7 +201,7 @@ body {
    }
 
    .documents-wrapper {
-      flex-direction: row;
+      /* flex-direction: row; */
       justify-content: space-between;
       flex-wrap: wrap;
    }
@@ -204,10 +213,8 @@ body {
    }
 }
 
-@media (max-width: 768px){
-   .legenda-icon-bg {
-      width: 25px;
-      height: 25px;
+@media (min-width: 1400px) {
+   .documents-wrapper {
+      flex-direction: row;
    }
 }
- 
